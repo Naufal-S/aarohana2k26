@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030816">
+  <title>AAROHANA 2K26 | ECE Family</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grid-floor"></div>
+  <div class="circuit-layer" aria-hidden="true"></div>
+  <div id="particles" aria-hidden="true"></div>
+  <div id="celebration" aria-hidden="true"></div>
+
+  <header class="top-header">
+    <div class="logo-row">
+      <div class="logo-frame"><img src="college-logo.png" alt="Government Engineering College Hassan"></div>
+      <div class="logo-frame govt-frame"><img src="govt-karnataka.png" alt="Government of Karnataka"></div>
+      <div class="logo-frame"><img src="ece-association.png" alt="ECE Association"></div>
+    </div>
+    <p class="college-name">GOVERNMENT ENGINEERING COLLEGE, HASSAN</p>
+    <p class="department-name">DEPARTMENT OF ELECTRONICS &amp; COMMUNICATION</p>
+    <p class="association-name">ECE ASSOCIATION PRESENTS</p>
+  </header>
+
+  <main>
+    <!-- SCREEN 1: EVENT LANDING -->
+    <section class="screen active" id="homeScreen">
+      <div class="hero">
+        <div class="eyebrow"><span class="live-dot"></span> A NEW CHAPTER BEGINS</div>
+        <h1 class="event-title">AAROHANA <span>2K26</span></h1>
+        <p class="event-date">12 · OCTOBER · 2026</p>
+        <div class="hero-divider"><span></span><b>ECE FAMILY</b><span></span></div>
+        <h2 class="hero-heading">YOUR JOURNEY STARTS HERE.</h2>
+        <p class="hero-copy">New connections. New ideas. New possibilities.</p>
+        <p class="hero-welcome">Welcome to the ECE Family.</p>
+
+        <div class="countdown">
+          <div><strong id="days">--</strong><span>DAYS</span></div>
+          <div><strong id="hours">--</strong><span>HRS</span></div>
+          <div><strong id="minutes">--</strong><span>MIN</span></div>
+          <div><strong id="seconds">--</strong><span>SEC</span></div>
+        </div>
+
+        <button class="primary-btn" id="enterBtn">
+          ENTER AAROHANA <span>✦</span>
+        </button>
+        <p class="small-note">LEARN · CONNECT · EXPLORE · INNOVATE</p>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: INVITATION / USN -->
+    <section class="screen" id="invitationScreen">
+      <div class="screen-content invitation-content">
+        <div class="orbit-icon"><span>✉</span></div>
+        <p class="eyebrow">IDENTITY CHECK</p>
+        <h2 class="section-title">YOUR <span>INVITATION</span><br>AWAITS</h2>
+        <p class="section-copy">Enter your USN to unlock your personal ECE welcome.</p>
+
+        <form id="usnForm">
+          <label for="usnInput">STUDENT USN</label>
+          <div class="input-wrap">
+            <span>⌁</span>
+            <input id="usnInput" name="usn" type="text"
+              placeholder="4GH25EC001" autocomplete="off"
+              autocapitalize="characters" maxlength="10" required>
+          </div>
+          <p id="errorMessage" class="error-message" role="alert"></p>
+          <button class="primary-btn" type="submit">
+            UNLOCK MY WELCOME 🚀
+          </button>
+        </form>
+        <button class="text-btn" id="backHomeBtn">← BACK TO BEGINNING</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: PERSONALIZED WELCOME -->
+    <section class="screen" id="welcomeScreen">
+      <div class="screen-content welcome-content">
+        <p class="eyebrow"><span class="live-dot"></span> INVITATION UNLOCKED</p>
+        <div class="welcome-symbol">✦</div>
+        <p class="greeting-label">THIS WELCOME IS FOR</p>
+        <h2 class="student-name" id="studentName">ECE STUDENT</h2>
+        <p class="student-usn" id="studentUsn"></p>
+        <h2 class="family-heading">❤️ WELCOME TO THE ECE FAMILY</h2>
+        <p class="section-copy">
+          A new chapter, new friendships, and countless opportunities
+          are waiting for you. Let’s learn, build, and grow together.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span>📡</span><h3>CONNECT</h3>
+            <p>Build connections.</p>
+          </article>
+          <article class="feature-card">
+            <span>⚡</span><h3>CREATE</h3>
+            <p>Turn ideas into reality.</p>
+          </article>
+          <article class="feature-card">
+            <span>🤖</span><h3>INNOVATE</h3>
+            <p>Think beyond limits.</p>
+          </article>
+        </div>
+
+        <div class="journey-grid">
+          <div><span>🤝</span><p>NEW FRIENDS</p></div>
+          <div><span>💡</span><p>NEW IDEAS</p></div>
+          <div><span>🔧</span><p>NEW SKILLS</p></div>
+          <div><span>🚀</span><p>NEW MEMORIES</p></div>
+        </div>
+
+        <blockquote>"Your journey in ECE starts today."</blockquote>
+        <p class="motto">LEARN · CONNECT · EXPLORE · INNOVATE</p>
+
+        <div class="surprise-card" id="surpriseCard" hidden>
+          <span class="surprise-icon">🎁</span>
+          <h3>WAIT... THERE'S SOMETHING SPECIAL!</h3>
+          <p>You've been selected for a special surprise!</p>
+          <p>Your surprise is waiting for you on Freshers Day.</p>
+          <strong>12 OCTOBER 2026</strong>
+          <small>🤫 KEEP IT SECRET...</small>
+        </div>
+
+        <div class="download-panel">
+          <p>YOUR PERSONAL INVITATION</p>
+          <button class="outline-btn" id="openInvitationBtn">
+            📄 OPEN INVITATION / SAVE AS PDF
+          </button>
+          <button class="secondary-btn" id="downloadHtmlBtn">
+            ↓ DOWNLOAD INVITATION FILE
+          </button>
+          <p class="download-help" id="downloadStatus" aria-live="polite">
+            Open the invitation, then choose Print → Save as PDF.
+          </p>
+        </div>
+
+        <button class="primary-btn" id="beginBtn">
+          LET'S BEGIN 🚀
+        </button>
+      </div>
+    </section>
+
+    <!-- SCREEN 4: ECE SYSTEM INITIALIZATION -->
+    <section class="screen system-screen" id="systemScreen">
+      <div class="system-content">
+        <div class="system-symbol" id="systemSymbol">📡</div>
+        <p class="eyebrow">PLEASE STAND BY</p>
+        <h2 class="section-title" id="systemTitle">SIGNAL CONNECTING</h2>
+        <p class="section-copy" id="systemDescription">
+          Connecting you to your new ECE family...
+        </p>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <p class="progress-label" id="progressLabel">0%</p>
+
+        <div class="system-checklist">
+          <div class="system-row" id="check1"><span>📡 SIGNAL CONNECTED</span><b>○</b></div>
+          <div class="system-row" id="check2"><span>⚡ ECE SYSTEM INITIALIZED</span><b>○</b></div>
+          <div class="system-row" id="check3"><span>🤝 ECE FAMILY NETWORK ONLINE</span><b>○</b></div>
+          <div class="system-row" id="check4"><span>💡 INNOVATION MODE ON</span><b>○</b></div>
+          <div class="system-row" id="check5"><span>🚀 JOURNEY STATUS READY</span><b>○</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREEN 5: MISSION STARTED -->
+    <section class="screen" id="missionScreen">
+      <div class="screen-content mission-content">
+        <div class="mission-rocket">🚀</div>
+        <p class="eyebrow">ALL SYSTEMS ONLINE</p>
+        <h2 class="section-title">MISSION STARTED</h2>
+        <div class="mission-lines">
+          <p>Learn from each other.</p>
+          <p>Connect with your ECE family.</p>
+          <p>Create something meaningful.</p>
+          <p>Explore. Innovate. Grow.</p>
+        </div>
+        <h3 class="mission-event">AAROHANA 2K26</h3>
+        <p class="event-date">12 OCTOBER 2026</p>
+        <button class="primary-btn" id="finalWelcomeBtn">❤️ WELCOME TO ECE</button>
+      </div>
+    </section>
+
+    <!-- SCREEN 6: FINAL GOODBYE / CELEBRATION -->
+    <section class="screen" id="farewellScreen">
+      <div class="screen-content farewell-content">
+        <div class="farewell-stars">✦ ✧ ✦</div>
+        <p class="eyebrow">UNTIL WE MEET</p>
+        <h2 class="farewell-title">WE'LL SEE YOU SOON</h2>
+        <h3 class="farewell-event">ON AAROHANA 2K26</h3>
+        <div class="farewell-divider"></div>
+        <p class="farewell-message">
+          Every great journey begins with a single step.
+          May your time in ECE be filled with curiosity,
+          courage, friendship, creativity, and unforgettable memories.
+        </p>
+        <blockquote class="farewell-quote">
+          “Dream boldly. Learn continuously. Build something that matters.”
+        </blockquote>
+        <p class="farewell-thought">
+          The future is not just something you enter — it is something
+          you create, one idea at a time.
+        </p>
+        <h3 class="family-signoff">ONCE AGAIN, WELCOME TO THE ECE FAMILY ❤️</h3>
+        <p class="farewell-date">12 · OCTOBER · 2026</p>
+        <p class="farewell-thanks">THANK YOU FOR BEING PART OF OUR ECE FAMILY.</p>
+        <div class="falling-note">🌸 🌼 ✨ 🌺 ✨ 🌸</div>
+        <p class="end-label">YOUR ECE JOURNEY STARTS NOW.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- PRINTABLE INVITATION CONTENT -->
+  <template id="invitationTemplate">
+    <article class="print-invitation">
+      <div class="print-top">GOVERNMENT ENGINEERING COLLEGE, HASSAN</div>
+      <p class="print-department">DEPARTMENT OF ELECTRONICS &amp; COMMUNICATION</p>
+      <p class="print-association">ECE ASSOCIATION PRESENTS</p>
+      <div class="print-line"></div>
+      <h1>AAROHANA <span>2K26</span></h1>
+      <p class="print-date">12 OCTOBER 2026</p>
+      <p class="print-kicker">A PERSONAL INVITATION FOR</p>
+      <h2 class="print-student-name">STUDENT NAME</h2>
+      <p class="print-usn">STUDENT USN</p>
+      <h2 class="print-welcome">WELCOME TO THE ECE FAMILY</h2>
+      <p class="print-message">
+        You are invited to begin a wonderful new chapter with the
+        Electronics &amp; Communication Engineering family.
+        May your journey be filled with new friendships, bold ideas,
+        creativity, discovery, and unforgettable memories.
+      </p>
+      <div class="print-pill-row">
+        <span>LEARN</span><span>CONNECT</span><span>EXPLORE</span><span>INNOVATE</span>
+      </div>
+      <p class="print-quote">“Your journey in ECE starts today.”</p>
+      <div class="print-footer">WITH WARM WISHES FROM YOUR ECE FAMILY</div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
